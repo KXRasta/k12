@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Paraphraser and AI Detector</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            text-align: center;
+        }
+
+        h1 {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            margin: 0;
+        }
+
+        form {
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            max-width: 600px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none;
+            box-sizing: border-box;
+        }
+
+        button {
+            font-size: 1em;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button[name="action"][value="paraphrase"] {
+            background-color: #007BFF;
+        }
+
+        button[name="action"][value="paraphrase"]:hover {
+            background-color: #0056b3;
+        }
+
+        button[name="action"][value="detectAI"] {
+            background-color: #FF5722;
+        }
+
+        button[name="action"][value="detectAI"]:hover {
+            background-color: #e64a19;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+    <h1>Text Paraphraser and AI Detector</h1>
+    <form method="post" action="/paraphrase">
+        <label for="inputText">Enter your text:</label><br>
+        <textarea id="inputText" name="inputText" placeholder="Type your text here..."></textarea><br><br>
+        <button type="submit" name="action" value="paraphrase">Paraphrase</button>
+        <button type="submit" name="action" value="detectAI">Detect AI Level</button>
+    </form>
+    <footer>
+        <p>&copy; 2024 Text Tools. All rights reserved.</p>
+    </footer>
+</body>
+</html>
